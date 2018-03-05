@@ -25,6 +25,8 @@ security:
 
 spring:
     datasource:
+        driverClassName: org.h2.Driver
+        url: jdbc:h2:mem:bootexample;MODE=MySQL
         data: classpath:/sql/data.sql
         #driver-class-name: com.mysql.jdbc.Driver
         #password: '1234'
@@ -36,5 +38,7 @@ spring:
         database-platform: org.hibernate.dialect.MySQLDialect
         generate-ddl: false
         hibernate:
-            ddl-auto: none
+            ddl-auto: create-drop
+            #ddl-auto: none mysql
         show-sql: true
+        
