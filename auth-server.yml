@@ -19,7 +19,7 @@ security:
             access-token-validity-seconds: 1800
             authorized-grant-types: password,refresh_token
             client-id: concrete
-            client-secret: 12345
+            client-secret: $2a$10$r0RFDmpneBVryx.ihHK9gu6FFJQi4nTxQUqzdSTvrPpaKZMxigqpy
             resource-ids: resources
             scope: read,write
 
@@ -38,7 +38,7 @@ spring:
         database-platform: org.hibernate.dialect.MySQLDialect
         generate-ddl: false
         hibernate:
-            ddl-auto: create-drop
-            #ddl-auto: none mysql
+            #ddl-auto: create-drop
+            ddl-auto: none 
         show-sql: true
         
