@@ -19,7 +19,7 @@ security:
             access-token-validity-seconds: 1800
             authorized-grant-types: password,refresh_token
             client-id: concrete
-            client-secret: teste1234
+            client-secret: $2y$10$aORkqdANotpapzu.6N6bt.5CF1b3u1urCSqJOvzAo2qLopV8AW98W
             resource-ids: resources
             scope: read,write
 
