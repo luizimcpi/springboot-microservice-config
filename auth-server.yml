@@ -25,12 +25,13 @@ security:
 
 spring:
     datasource:
-        url: jdbc:h2:mem:auth_server_db
+        url: jdbc:h2:mem:auth-server-app;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+        platform: h2
+        username: sa
+        password:
+        driverClassName: org.h2.Driver
         data: classpath:/sql/data.sql
         schema: classpath:/sql/schema.sql
-        username: 
-        password: 
-        dataSourceClassName: org.h2.jdbcx.JdbcDataSource
         #driverClassName: com.mysql.jdbc.Driver
         #platform: mysql
         #driver-class-name: com.mysql.jdbc.Driver
@@ -40,9 +41,9 @@ spring:
         #database-platform: org.hibernate.dialect.MySQLDialect
         database-platform: org.hibernate.dialect.H2Dialect
         database: H2
-        generate-ddl: false
+        #generate-ddl: false
         hibernate:
             #ddl-auto: create-drop
-            ddl-auto: none 
+            ddl-auto: update 
         show-sql: true
         
