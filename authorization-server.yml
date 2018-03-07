@@ -25,16 +25,31 @@ security:
 
 spring:
     datasource:
+        url: jdbc:h2:mem:auth-app;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+        platform: h2
+        username: sa
+        password:
+        driver-class-name: org.h2.Driver
         data: classpath:/sql/data.sql
-        driver-class-name: com.mysql.jdbc.Driver 
-        platform: mysql
         schema: classpath:/sql/schema.sql
-        url: jdbc:mysql://localhost:3306/oauth?verifyServerCertificate=false&useSSL=false&requireSSL=false
-        username: root
-        password: 'root'
     jpa:
-        database-platform: org.hibernate.dialect.MySQLDialect
+        database-platform: org.hibernate.dialect.H2Dialect
         generate-ddl: false
-        hibernate:
-            ddl-auto: none
-        show-sql: true
+         hibernate:
+             ddl-auto: none
+         show-sql: true
+    #MySQL Parameters
+    # datasource:
+    #     data: classpath:/sql/data.sql
+    #     driver-class-name: com.mysql.jdbc.Driver 
+    #     platform: mysql
+    #     schema: classpath:/sql/schema.sql
+    #     url: jdbc:mysql://localhost:3306/oauth?verifyServerCertificate=false&useSSL=false&requireSSL=false
+    #     username: root
+    #     password: 'root'
+    # jpa:
+    #     database-platform: org.hibernate.dialect.MySQLDialect
+    #     generate-ddl: false
+    #     hibernate:
+    #         ddl-auto: none
+    #     show-sql: true
