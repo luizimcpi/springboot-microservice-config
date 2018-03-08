@@ -26,7 +26,7 @@ security:
 spring:
     #H2 Parameters
      datasource:
-         url: jdbc:h2:oauth;MODE=MySQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+         url: jdbc:h2:oauth?verifyServerCertificate=false&useSSL=false&requireSSL=false;MODE=MySQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
          driver-class-name: org.h2.Driver
          platform: h2
          username: sa
@@ -37,7 +37,7 @@ spring:
          database-platform: org.hibernate.dialect.MySQLDialect
          generate-ddl: false
           hibernate:
-              ddl-auto: create-drop
+              ddl-auto: false
           show-sql: true
     #MySQL Parameters
     #  datasource:
