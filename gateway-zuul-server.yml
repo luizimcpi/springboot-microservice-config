@@ -1,7 +1,7 @@
 zuul: 
   routes: 
-    person: 
-      url: http://localhost:9093/api/person
+    person-service-h2: 
+      url: http://localhost:9093
 
 ribbon:
   eureka:
