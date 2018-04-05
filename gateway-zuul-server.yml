@@ -22,13 +22,9 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
-management:
-  security:
-    enabled: false
-
-# authserver:
-#   hostname: http://localhost:9092
-# security:
-#   oauth2:
-#     resource:
-#       userInfoUri: ${authserver.hostname}/user
+authserver:
+  hostname: http://localhost:9092
+security:
+  oauth2:
+    resource:
+      userInfoUri: ${authserver.hostname}/user
