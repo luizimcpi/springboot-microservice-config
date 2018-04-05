@@ -1,6 +1,5 @@
 zuul: 
-  routes: 
-    api:
+  routes:
       person: 
         url: http://localhost:9093
 
