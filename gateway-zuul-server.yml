@@ -1,8 +1,12 @@
 zuul: 
   routes:
-      person: 
-        url: http://localhost:9093
-
+    person: 
+      url: http://localhost:9093
+    oauth2:
+      path: /**
+      serviceId: oauth2
+      stripPrefix: false
+   
 ribbon:
   eureka:
     enabled: false
