@@ -3,7 +3,7 @@ zuul:
     person: 
       url: http://localhost:9093
     oauth2:
-      path: /**
+      path: /person/**
       serviceId: oauth2
       stripPrefix: false
    
