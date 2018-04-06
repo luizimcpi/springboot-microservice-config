@@ -2,10 +2,6 @@ zuul:
   routes:
     person: 
       url: http://localhost:9093
-    oauth2:
-      path: /person/**
-      serviceId: oauth2
-      stripPrefix: false
    
 ribbon:
   eureka:
