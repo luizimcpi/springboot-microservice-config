@@ -1,7 +1,8 @@
 zuul: 
   routes:
     person: 
-      url: http://localhost:9093
+      path: /person/**
+      url: http://localhost:9093/person
    
 ribbon:
   eureka:
