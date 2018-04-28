@@ -3,6 +3,9 @@ zuul:
     person: 
       path: /person/**
       url: http://localhost:9093/person
+    person: 
+      path: /cart/**
+      url: http://localhost:9095/cart
    
 ribbon:
   eureka:
